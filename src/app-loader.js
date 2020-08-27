@@ -20,14 +20,14 @@ const loadScript = ({ src, componentName }) => {
     });
   }
 
-  const scriptElement = document.createElement("script");
+  const scriptElement = document.createElement('script');
 
-  scriptElement.setAttribute("src", src);
-  scriptElement.setAttribute("id", componentName);
+  scriptElement.setAttribute('src', src);
+  scriptElement.setAttribute('id', componentName);
 
   return new Promise((resolve, reject) => {
     const onLoad = () => {
-      scriptElement.removeEventListener("load", onLoad);
+      scriptElement.removeEventListener('load', onLoad);
       addScript(componentName);
       resolve({
         message: `[microapp-shell] ${componentName} app has been just loaded`,
@@ -35,14 +35,14 @@ const loadScript = ({ src, componentName }) => {
     };
 
     const onError = () => {
-      scriptElement.removeEventListener("error", onError);
+      scriptElement.removeEventListener('error', onError);
       reject({
         message: `[microapp-shell] ${componentName} app has not been loaded`,
       });
     };
 
-    scriptElement.addEventListener("load", onLoad);
-    scriptElement.addEventListener("error", onError);
+    scriptElement.addEventListener('load', onLoad);
+    scriptElement.addEventListener('error', onError);
 
     document.body.appendChild(scriptElement);
   });
@@ -55,15 +55,15 @@ const loadStyle = ({ src, componentName }) => {
     });
   }
 
-  const linkElement = document.createElement("link");
+  const linkElement = document.createElement('link');
 
-  linkElement.setAttribute("type", "text/css");
-  linkElement.setAttribute("rel", "stylesheet");
-  linkElement.setAttribute("href", src);
+  linkElement.setAttribute('type', 'text/css');
+  linkElement.setAttribute('rel', 'stylesheet');
+  linkElement.setAttribute('href', src);
 
   return new Promise((resolve, reject) => {
     const onLoad = () => {
-      linkElement.removeEventListener("load", onLoad);
+      linkElement.removeEventListener('load', onLoad);
       addStyle(componentName);
       resolve({
         message: `[microapp-shell] ${componentName} stylesheet has been just loaded`,
@@ -71,14 +71,14 @@ const loadStyle = ({ src, componentName }) => {
     };
 
     const onError = () => {
-      linkElement.removeEventListener("error", onError);
+      linkElement.removeEventListener('error', onError);
       reject({
         message: `[microapp-shell] ${componentName} stylesheet has not been loaded`,
       });
     };
 
-    linkElement.addEventListener("load", onLoad);
-    linkElement.addEventListener("error", onError);
+    linkElement.addEventListener('load', onLoad);
+    linkElement.addEventListener('error', onError);
 
     document.head.appendChild(linkElement);
   });
@@ -88,7 +88,7 @@ const loadMicroApp = (config) => {
   const { host } = config;
 
   if (!host) {
-    throw { message: "Source host is not specified" };
+    throw { message: 'Source host is not specified' };
   }
 
   const { componentName } = config;

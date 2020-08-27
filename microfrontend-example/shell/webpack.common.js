@@ -1,15 +1,15 @@
-const path = require("path");
-const { plugins } = require("./plugins");
+const path = require('path');
+const { plugins } = require('./plugins');
 
-const { rules } = require("./loaders");
-console.log("DIR", path.resolve(__dirname));
+const { rules } = require('./loaders');
+
 module.exports = {
   entry: {
-    index: ["./src/index.js"],
+    index: ['./src/index.js'],
   },
   output: {
-    path: path.resolve(__dirname, "./../dist"),
-    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, './../dist'),
+    filename: '[name].bundle.js',
   },
   plugins,
   module: {

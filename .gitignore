@@ -10,6 +10,10 @@
 
 # dependencies
 /node_modules
+/microfrontend-example/shell/node_modules
+/microfrontend-example/header-app/node_modules
+/microfrontend-example/foo-app/node_modules
+/microfrontend-example/bar-app/node_modules
 
 # profiling files
 chrome-profiler-events*.json

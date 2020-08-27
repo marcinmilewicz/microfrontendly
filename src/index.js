@@ -1,10 +1,6 @@
-import Microfrontendly from "./microfrontendly";
-import loadMicroApp from "./app-loader";
-import { getMicroAppConfigByPath, getMicroAppConfigByName } from "./utils";
+import Microfrontendly from './microfrontendly';
+import loadMicroApp from './app-loader';
 
-export {
-  Microfrontendly,
-  loadMicroApp,
-  getMicroAppConfigByPath,
-  getMicroAppConfigByName,
-};
+import { getMicroAppConfigByName, getMicroAppConfigByPath } from 'utils';
+
+export { Microfrontendly, loadMicroApp, getMicroAppConfigByName, getMicroAppConfigByPath };
