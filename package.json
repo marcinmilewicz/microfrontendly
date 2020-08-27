@@ -20,7 +20,7 @@
     "umd"
   ],
   "author": "Marcin Milewicz",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
@@ -42,5 +42,9 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcinmilewicz/microfrontendly.git"
   }
 }
