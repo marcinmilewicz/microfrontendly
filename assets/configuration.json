@@ -1,0 +1,58 @@
+{
+  "containerId": "shell-container",
+  "apps": [
+    {
+      "componentName": "header-microapp",
+      "sources": {
+        "js": "index.js"
+      },
+      "host": "http://localhost:1001"
+    },
+    {
+      "componentName": "foo-microapp",
+      "sources": {
+        "js": "foo-microapp.js",
+        "styles": "styles.css"
+      },
+      "host": "http://localhost:6001",
+      "routes": [
+        {
+          "name": "Foo MicroApp: ",
+          "children": [
+            {
+              "name": "| First |",
+              "path": "/foo-microapp/first"
+            },
+            {
+              "name": "| Second |",
+              "path": "/foo-microapp/second"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "componentName": "bar-microapp",
+      "sources": {
+        "js": "bar-microapp.js",
+        "styles": "styles.css"
+      },
+      "host": "http://localhost:6002",
+      "routes": [
+        {
+          "name": "Bar Micro App: ",
+          "children": [
+            {
+              "name": "| First |",
+              "path": "/bar-microapp/first"
+            },
+            {
+              "name": "| Second |",
+              "path": "/bar-microapp/second"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
