@@ -7,15 +7,17 @@
     "build:dev": "webpack --config webpack.dev.js --progress --colors --watch",
     "build:prod": "webpack --config webpack.prod.js",
     "build:analyze": "webpack --config webpack.prod.js --profile --json > stats.json",
-    "analyze": "npx webpack-bundle-analyzer stats.json",
-    "example:dev": "webpack --config microfrontend-example/shell/webpack.dev.js --progress --colors --watch",
-    "example:serve": "webpack-dev-server --config microfrontend-example/shell/webpack.dev.js --progress --colors --watch"
+    "build:microapp": "npx lerna run build:microapp --parallel",
+    "serve:microapp": "npx lerna run serve:microapp --parallel",
+    "serve:shell": "npx lerna run --scope shell-example serve",
+    "analyze": "npx webpack-bundle-analyzer stats.json"
   },
   "keywords": [
     "microfrontend",
     "federeted",
     "microfrontends",
-    "micro"
+    "micro",
+    "umd"
   ],
   "author": "Marcin Milewicz",
   "license": "ISC",
@@ -30,6 +32,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-prettier": "^3.1.4",
     "html-webpack-plugin": "^4.3.0",
+    "lerna": "^3.22.1",
     "mini-css-extract-plugin": "^0.11.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.1.1",

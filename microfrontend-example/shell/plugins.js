@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const CleanWebpack = new CleanWebpackPlugin();
 const HtmlWebpack = new HtmlWebpackPlugin({
-  template: './microfrontend-example/shell/src/index.html',
+  template: './src/index.html',
   inject: true,
   chunks: ['index'],
   filename: 'index.html',

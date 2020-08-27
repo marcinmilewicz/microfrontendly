@@ -5,7 +5,7 @@ const { rules } = require("./loaders");
 console.log("DIR", path.resolve(__dirname));
 module.exports = {
   entry: {
-    index: ["./microfrontend-example/shell/src/index.js"],
+    index: ["./src/index.js"],
   },
   output: {
     path: path.resolve(__dirname, "./../dist"),

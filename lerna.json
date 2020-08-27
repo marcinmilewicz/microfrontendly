@@ -1,0 +1,6 @@
+{
+  "packages": [
+    "microfrontend-example/*"
+  ],
+  "version": "independent"
+}

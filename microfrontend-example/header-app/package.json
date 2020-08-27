@@ -1,0 +1,41 @@
+{
+  "name": "microapp-header",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build:microapp": "parcel build src/index.jsx --bundle-node-modules --no-cache",
+    "serve:microapp": "http-server --cors='*' dist/ -p 9001",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,html}\" --quite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "http-server": "^0.12.3",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.1.1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-shadow-dom-retarget-events": "^1.0.11"
+  },
+  "prettier": {
+    "printWidth": 200,
+    "singleQuote": true,
+    "endOfLine": "auto"
+  }
+}

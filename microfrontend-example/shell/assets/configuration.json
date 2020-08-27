@@ -6,7 +6,7 @@
       "sources": {
         "js": "index.js"
       },
-      "host": "http://localhost:1001"
+      "host": "http://localhost:9001"
     },
     {
       "componentName": "foo-microapp",
@@ -14,7 +14,7 @@
         "js": "foo-microapp.js",
         "styles": "styles.css"
       },
-      "host": "http://localhost:6001",
+      "host": "http://localhost:9002",
       "routes": [
         {
           "name": "Foo MicroApp: ",
@@ -37,7 +37,7 @@
         "js": "bar-microapp.js",
         "styles": "styles.css"
       },
-      "host": "http://localhost:6002",
+      "host": "http://localhost:9003",
       "routes": [
         {
           "name": "Bar Micro App: ",
