@@ -40,7 +40,7 @@ Go to http://localhost:9000/
 
 The library design is in early development, but the most important features are working properly. The library uses WebComponents as a microfrontend interface, thanks to which the micro-application shell is able to run micro-applications written in either Angular or React or pure WC.
 
-A big advantage and difference from Module Federation (or other solutions) is the fact that the location of the sources and their configuration are provided in runtime. This allows for release of individual functionality in micro-applications without rebuilding and redeployment entire application.
+A big advantage is the fact that the location of the sources and their configuration are provided in runtime. This allows for release of individual functionality in micro-applications without rebuilding and redeployment entire application.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

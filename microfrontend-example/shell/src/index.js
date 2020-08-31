@@ -8,13 +8,13 @@ import { loadMicroApp, Microfrontendly, getMicroAppConfigByName } from './../../
     const headerConfig = getMicroAppConfigByName('header-microapp', configuration);
 
     loadMicroApp(headerConfig).then(() => {
-      const header = document.getElementById('shell-header');
-      header.appendChild(document.createElement(headerConfig.componentName));
+      const header = document.createElement(headerConfig.componentName);
+      header.configuration = configuration;
+      document.getElementById('shell-header').appendChild(header);
     });
   };
 
   Microfrontendly('assets/configuration.json')
-    .withContainer(document.body)
     .render()
     .then((configuration) => {
       renderHeader(configuration, container);
