@@ -4,11 +4,11 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "serve": "webpack-dev-server --config webpack.dev.js --progress --colors --watch"
+    "serve": "npx webpack-dev-server --config webpack.dev.js --progress --colors --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "microfrontendly": "0.0.2"
+    "microfrontendly": "0.1.0"
   }
 }

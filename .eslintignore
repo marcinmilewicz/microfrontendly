@@ -1,0 +1,8 @@
+dist
+lib
+microfrontend-example
+node_modules
+
+jest.config.js
+
+typings

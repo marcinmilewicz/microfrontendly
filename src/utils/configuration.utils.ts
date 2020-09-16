@@ -1,4 +1,4 @@
-export const getMicroAppConfigByPath = (pathname, configuration) => {
+export const getMicroAppConfigByPath = (pathname: string, configuration) => {
   const paths = pathname.split('/');
 
   if (!paths || !paths[1]) return undefined;

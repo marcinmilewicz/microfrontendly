@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": false,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": false,
+    "removeComments": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "typeRoots": ["node_modules/@types", "./typings"]
+  },
+  "include": ["./src/*.ts", "./typings/index.d.ts"],
+  "exclude": ["node_modules/**/*", ".idea/**/*", "webpack.*.js", "**/*.js", "**/*.spec.ts"]
+}

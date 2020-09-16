@@ -1,0 +1,84 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "apps": [
+        {
+          "id": "header-microapp",
+          "container": "shell-header"
+        }
+      ]
+    },
+    {
+      "path": "/foo-microapp",
+      "apps": [
+        {
+          "id": "header-microapp",
+          "container": "shell-header"
+        },
+        {
+          "id": "foo-microapp",
+          "container": "app-container"
+        }
+      ]
+    },
+    {
+      "path": "/bar-microapp",
+      "apps": [
+        {
+          "id": "header-microapp",
+          "container": "shell-header"
+        },
+        {
+          "id": "bar-microapp",
+          "container": "app-container"
+        }
+      ]
+    }
+  ],
+  "apps": [
+    {
+      "selector": "header-microapp",
+      "sources": {
+        "entryJs": "index.js"
+      },
+      "host": "http://localhost:9001"
+    },
+    {
+      "selector": "foo-microapp",
+      "sources": {
+        "entryJs": "foo-microapp.js",
+        "entryStyles": "styles.css"
+      },
+      "host": "http://localhost:9002",
+      "routes": [
+        {
+          "id": "| First |",
+          "path": "/foo-microapp/first"
+        },
+        {
+          "id": "| Second |",
+          "path": "/foo-microapp/second"
+        }
+      ]
+    },
+    {
+      "selector": "bar-microapp",
+      "sources": {
+        "entryJs": "bar-microapp.js",
+        "entryStyles": "styles.css"
+      },
+      "host": "http://localhost:9003",
+      "routes": [
+        {
+          "id": "| First |",
+          "path": "/bar-microapp/first"
+        },
+        {
+          "id": "| Second |",
+          "path": "/bar-microapp/second"
+        }
+      ]
+    }
+  ]
+}

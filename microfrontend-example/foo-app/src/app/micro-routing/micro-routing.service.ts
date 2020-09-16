@@ -28,7 +28,6 @@ export class MicroRoutingService {
 
 	initRouting() {
 		this.routeChange$.subscribe((event) => {
-			console.info(`[${fromSettings.APP_NAME}] RouteChangedEvent`, event);
 			this.router.navigateByUrl(`${event.path}`);
 		});
 
