@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import * as fromSettings from './app.settings';
-import { AngularElementRoutingModule } from '@microfrontendly/angular-element-routing/lib/angular-element-routing.module';
+import { AngularElementRouteModule } from '@microfrontendly/angular-element-routing';
 
 const routes: Routes = [
   {
@@ -23,7 +23,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes), AngularElementRoutingModule.forRoot(fromSettings.APP_NAME, fromSettings.ROUTE_CHANGE_EVENT)]
+  imports: [CommonModule, RouterModule.forRoot(routes), AngularElementRouteModule.forRoot(fromSettings.APP_NAME, fromSettings.ROUTE_CHANGE_EVENT)]
 })
 export class AppRoutingModule {
 }
