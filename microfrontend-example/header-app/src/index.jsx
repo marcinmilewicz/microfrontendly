@@ -13,11 +13,11 @@ class MicroAppHeader extends HTMLElement {
     ReactDOM.unmountComponentAtNode(this.rootPoint);
   }
 
-  get configuration(){
+  get configuration() {
     return this._configuration;
   }
 
-  set configuration(value){
+  set configuration(value) {
     this._configuration = value;
   }
 
@@ -74,7 +74,7 @@ class MicroAppHeader extends HTMLElement {
       this.shadowRoot.appendChild(this.rootPoint);
     }
 
-    ReactDOM.render(<Header configuration={this._configuration}/>, this.rootPoint);
+    ReactDOM.render(<Header configuration={this._configuration} />, this.rootPoint);
 
     retargetEvents(this.shadowRoot);
   }

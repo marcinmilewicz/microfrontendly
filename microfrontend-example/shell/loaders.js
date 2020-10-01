@@ -5,15 +5,15 @@ const JSLoader = {
   exclude: /(node_modules)/,
   include: path.resolve(__dirname, './../src'),
   use: {
-    loader: 'babel-loader',
-  },
+    loader: 'babel-loader'
+  }
 
 };
-const ImageLoader = { test: /\.(png|jpg|gif)$/, use: ['file-loader'] };
+const ImageLoader = { test: /\.(png|jpg|gif)$/, use: [ 'file-loader' ] };
 const StyleLoader = {
   test: /\.(sa|sc|c)ss$/,
   exclude: /header.scss/,
-  use: ['style-loader', 'css-loader', 'sass-loader'],
+  use: [ 'style-loader', 'css-loader', 'sass-loader' ]
 };
 const ShellHeaderLoader = {
   test: /header.scss/,
@@ -25,14 +25,14 @@ const ShellHeaderLoader = {
           const headerContainer = document.querySelector('#shell-header');
           headerContainer.attachShadow({ mode: 'open' });
           headerContainer.shadowRoot.appendChild(element);
-        },
-      },
+        }
+      }
     },
     'css-loader',
-    'sass-loader',
-  ],
+    'sass-loader'
+  ]
 };
 
 module.exports = {
-  rules: [JSLoader, ImageLoader, StyleLoader, ShellHeaderLoader],
+  rules: [ JSLoader, ImageLoader, StyleLoader, ShellHeaderLoader ]
 };

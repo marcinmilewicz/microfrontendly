@@ -6,7 +6,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [{ path: '', component: SecondComponent }];
 
 @NgModule({
-	declarations: [SecondComponent],
-	imports: [CommonModule, RouterModule.forChild(routes)]
+  declarations: [SecondComponent],
+  imports: [CommonModule, RouterModule.forChild(routes)]
 })
-export class SecondFeatureModule {}
+export class SecondFeatureModule {
+}

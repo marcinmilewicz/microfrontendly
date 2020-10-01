@@ -5,14 +5,14 @@ const { rules } = require('./loaders');
 
 module.exports = {
   entry: {
-    index: ['./src/index.js'],
+    index: [ './src/index.js' ]
   },
   output: {
     path: path.resolve(__dirname, './../dist'),
-    filename: '[name].bundle.js',
+    filename: '[name].bundle.js'
   },
   plugins,
   module: {
-    rules,
-  },
+    rules
+  }
 };
