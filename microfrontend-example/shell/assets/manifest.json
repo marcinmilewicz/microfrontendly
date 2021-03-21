@@ -42,7 +42,41 @@
       "sources": {
         "entryJs": "index.js"
       },
-      "host": "http://localhost:9001"
+      "host": "http://localhost:9004",
+      "properties": {
+        "routes": [
+          {
+            "name": "Foo",
+            "app": "foo-microapp",
+            "path": "/foo-microapp",
+            "children": [
+              {
+                "name": "First",
+                "path": "/foo-microapp/first"
+              },
+              {
+                "name": "Second",
+                "path": "/foo-microapp/second"
+              }
+            ]
+          },
+          {
+            "name": "Bar",
+            "app": "bar-microapp",
+            "path": "/bar-microapp",
+            "children": [
+              {
+                "name": "First",
+                "path": "/bar-microapp/first"
+              },
+              {
+                "name": "Second",
+                "path": "/bar-microapp/second"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "selector": "foo-microapp",

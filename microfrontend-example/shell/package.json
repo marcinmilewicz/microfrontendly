@@ -7,8 +7,8 @@
     "serve": "npx webpack-dev-server --config webpack.dev.js --progress --colors --watch"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "microfrontendly": "0.1.0"
+    "microfrontendly": "^0.2.0"
   }
 }

@@ -18,12 +18,13 @@ export type MicroAppRoute = {
   path: string;
 };
 
-export type MicroAppConfig = {
+export type MicroAppConfig<Properties = { [key: string]: any }> = {
   selector: string;
   sources: Partial<MicroAppSources>;
   host: string;
   name?: string;
   routes?: MicroAppRoute[];
+  properties?: Properties;
 };
 
 export type MicroAppsManifest = {

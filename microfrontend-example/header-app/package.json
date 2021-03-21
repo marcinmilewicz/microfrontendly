@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build:microapp": "parcel build src/index.jsx --bundle-node-modules --no-cache",
-    "serve:microapp": "http-server --cors='*' dist/ -p 9001",
+    "build:microapp": "parcel build src/index.jsx --bundle-node-modules --no-cache --no-source-maps",
+    "serve:microapp": "http-server --cors='*' dist/ -p 9004",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,html}\" --quite"
   },
@@ -29,12 +29,13 @@
     "prettier": "^2.1.1"
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-shadow-dom-retarget-events": "^1.0.11"
   },
   "prettier": {
-    "printWidth": 200,
+    "printWidth": 140,
     "singleQuote": true,
     "endOfLine": "auto"
   }

@@ -10,8 +10,18 @@ const renderIntoContainer = (rootElement: HTMLElement, microAppConfig: MicroAppC
   loadMicroApp(microAppConfig)
     .then((config) => {
       const { selector } = config;
+
       if (isElementEmpty(rootElement)) {
-        rootElement.append(document.createElement(selector));
+        const renderedElement = document.createElement(selector);
+
+        if (config.properties) {
+          Object.keys(config.properties).map((key) => {
+            renderedElement[key] = config.properties[key];
+          });
+        }
+
+        rootElement.append(renderedElement);
+
         return config;
       }
 

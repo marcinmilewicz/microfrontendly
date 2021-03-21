@@ -13,11 +13,10 @@ import { RouterModule } from '@angular/router';
   imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
   entryComponents: [AppComponent],
-  bootstrap: []
+  bootstrap: [],
 })
 export class AppModule {
-  constructor(private injector: Injector) {
-  }
+  constructor(private injector: Injector) {}
 
   ngDoBootstrap() {
     const element = createCustomElement(AppComponent, { injector: this.injector });

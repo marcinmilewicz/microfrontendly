@@ -1,6 +1,6 @@
 {
   "name": "microfrontendly",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Microfrontend solution to gathering federated modules in runtime",
   "main": "lib/microfrontendly.js",
   "unpkg": "lib/microfrontendly.min.js",

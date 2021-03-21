@@ -11,19 +11,18 @@ const routes: Routes = [
       { path: '', redirectTo: 'first', pathMatch: 'full' },
       {
         path: 'first',
-        loadChildren: () => import('./first-feature/first-feature.module').then(module => module.FirstFeatureModule)
+        loadChildren: () => import('./first-feature/first-feature.module').then((module) => module.FirstFeatureModule),
       },
       {
         path: 'second',
-        loadChildren: () => import('./second-feature/second-feature.module').then(module => module.SecondFeatureModule)
-      }
-    ]
-  }
+        loadChildren: () => import('./second-feature/second-feature.module').then((module) => module.SecondFeatureModule),
+      },
+    ],
+  },
 ];
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes), AngularElementRouteModule.forRoot(fromSettings.APP_NAME, fromSettings.ROUTE_CHANGE_EVENT)]
+  imports: [CommonModule, RouterModule.forRoot(routes), AngularElementRouteModule.forRoot(fromSettings.APP_NAME, fromSettings.ROUTE_CHANGE_EVENT)],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

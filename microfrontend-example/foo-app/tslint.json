@@ -16,11 +16,6 @@
     },
     "eofline": true,
     "import-spacing": true,
-    "indent": [
-      true,
-      "tabs",
-      2
-    ],
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,

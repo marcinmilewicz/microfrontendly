@@ -1,3 +1,4 @@
+import { log } from 'util';
 import { MicroAppConfig } from './manifest';
 
 (window as any).__loadedScripts = [];

@@ -13,12 +13,12 @@ class MicroAppHeader extends HTMLElement {
     ReactDOM.unmountComponentAtNode(this.rootPoint);
   }
 
-  get configuration() {
-    return this._configuration;
+  get routes() {
+    return this._routes;
   }
 
-  set configuration(value) {
-    this._configuration = value;
+  set routes(value) {
+    this._routes = value;
   }
 
   mountReactHeaderComponent() {
@@ -28,58 +28,60 @@ class MicroAppHeader extends HTMLElement {
       this.shadowRoot.innerHTML = `
       <style>
       ul {
-         list-style-type: none;
-         overflow: hidden;
-       }
-
-      li {
-        float: left;
-       }
-       
-      li.link-parent {
-        text-decoration: none;
-        display: block;
-        padding-left: 20px;
-       }
-
-      li.link-child {
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-      
-      li.link-child:hover {
-        background-color: #111111;
-        cursor: pointer;
-      }
-      
-      .link-parent {
-      }
-      
-      .toolbar {
-        height: 60px;
-        margin: -8px;
-        display: flex;
-        align-items: center;
-        background-color: #1976d2;
-        color: white;
-        font-weight: 600;
-      }
-      
-      .toolbar img {
-        margin: 0 16px;
-      }
+          list-style-type: none;
+          overflow: hidden;
+        }
+        
+        li {
+          float: left;
+          line-height: 2.5em;
+        }
+        
+        li.link-parent {
+          text-decoration: none;
+          display: flex;
+          padding-left: 20px;
+        }
+        
+        li.link-children {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        
+        .link {
+          padding-left: 5px;
+          padding-right: 5px;
+          cursor: pointer;
+          font-size: 1.2em;
+        }
+        
+        .link:hover {
+        
+          color: rgb(221, 0, 49);
+        }
+        
+        .toolbar {
+          height: 60px;
+          margin: -8px;
+          display: flex;
+          align-items: center;
+          background-color: #1976d2;
+          color: white;
+          font-weight: 600;
+        }
+        
+        .toolbar img {
+          margin: 0 16px;
+        }
       
       </style>
       `;
       this.shadowRoot.appendChild(this.rootPoint);
     }
 
-    ReactDOM.render(<Header configuration={this._configuration} />, this.rootPoint);
-
+    ReactDOM.render(<Header routes={this.routes} />, this.rootPoint);
     retargetEvents(this.shadowRoot);
   }
-
-
 }
 
 window.customElements.define('header-microapp', MicroAppHeader);
